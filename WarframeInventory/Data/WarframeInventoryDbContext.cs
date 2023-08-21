@@ -3,9 +3,9 @@ using WarframeInventory.Models;
 
 namespace WarframeInventory.Data
 {
-    public class SystemTasksDbContext : DbContext
+    public class WarframeInventoryDbContext : DbContext
     {
-        public SystemTasksDbContext(DbContextOptions<SystemTasksDbContext> options) : base(options) { }
+        public WarframeInventoryDbContext(DbContextOptions<WarframeInventoryDbContext> options) : base(options) { }
 
         public DbSet<UserModel> Users { get; set; }
         public DbSet<WarframeModel> Warframes { get; set; }

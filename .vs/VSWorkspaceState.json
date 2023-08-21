@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WarframeInventory"
   ],
+  "SelectedNode": "\\WarframeInventory\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

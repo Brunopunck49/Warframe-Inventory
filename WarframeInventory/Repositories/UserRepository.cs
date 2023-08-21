@@ -7,10 +7,10 @@ namespace WarframeInventory.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly SystemTasksDbContext _dbContext;
-        public UserRepository(SystemTasksDbContext systemTasksDbContext) 
+        private readonly WarframeInventoryDbContext _dbContext;
+        public UserRepository(WarframeInventory warframeInventoryDbContext) 
         { 
-            _dbContext = systemTasksDbContext;
+            _dbContext = warframeInventoryDbContext;
         }
         public async Task<List<UserModel>> SearchAllUsers()
         {
