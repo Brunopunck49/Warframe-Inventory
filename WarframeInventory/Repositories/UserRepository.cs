@@ -8,7 +8,7 @@ namespace WarframeInventory.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly WarframeInventoryDbContext _dbContext;
-        public UserRepository(WarframeInventory warframeInventoryDbContext) 
+        public UserRepository(WarframeInventoryDbContext warframeInventoryDbContext) 
         { 
             _dbContext = warframeInventoryDbContext;
         }
