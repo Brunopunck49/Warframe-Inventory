@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WarframeInventory.Data.Map;
 using WarframeInventory.Models;
 
 namespace WarframeInventory.Data
@@ -12,6 +13,9 @@ namespace WarframeInventory.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new WarframeMap());
+
             base.OnModelCreating(modelBuilder);
         }
     }
