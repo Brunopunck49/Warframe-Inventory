@@ -36,5 +36,20 @@ namespace WarframeInventory.Controllers
             UserModel user = await _userRepository.AddUser(userModel);
             return Ok(user);
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UserModel>> UpdateUser([FromBody] UserModel userModel, int id)
+        {
+            userModel.Id = id;
+            UserModel user = await _userRepository.UpdateUser(userModel, id);
+            return Ok(user);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<UserModel>> DeleteUser(int id)
+        {
+            bool deleted = await _userRepository.DeleteUser(id);
+            return Ok(deleted);
+        }
     }
 }
